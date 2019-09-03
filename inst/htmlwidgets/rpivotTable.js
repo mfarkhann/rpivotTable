@@ -35,21 +35,6 @@ HTMLWidgets.widget({
       if (x.rendererLibraries.includes("C3")) {
         locale.renderers = $.extend(locale.renderers, locale.c3_renderers || $.pivotUtilities.c3_renderers);
       }
-      if (x.rendererLibraries.includes("plotly")) {
-        locale.renderers = $.extend(locale.renderers, locale.plotly_renderers || $.pivotUtilities.plotly_renderers);
-      }
-      if (x.rendererLibraries.includes("gchart")) {
-        // In theory this should work, however for some reason the google.load request misbehaves
-        /* $.ajax({
-         *   async: false,
-         *   dataType: "script",
-         *   url: "https://www.google.com/jsapi"
-         * });
-         * google.load("visualization", "1", {packages:["corechart", "charteditor"]});
-         */
-
-        locale.renderers = $.extend(locale.renderers, locale.gchart_renderers || $.pivotUtilities.gchart_renderers);
-      }
       if (x.rendererLibraries.includes("export")) {
         locale.renderers = $.extend(locale.renderers, locale.export_renderers || $.pivotUtilities.export_renderers);
       }

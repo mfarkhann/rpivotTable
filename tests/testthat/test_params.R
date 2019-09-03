@@ -55,9 +55,5 @@ test_that("parameters handled correctly",{
     rpivotTable(data.frame(),rendererLibraries=c("core"))$x$rendererLibraries[[1]]
     ,"core"
   )
-  expect_identical(
-    rpivotTable(data.frame(),rendererLibraries=c("core", "plotly", "export"))$x$rendererLibraries
-    ,c("core", "plotly", "export")
-  )
 })
 

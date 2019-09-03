@@ -22,7 +22,7 @@ the \strong{columns} of the pivot table.}
 
 \item{vals}{String name of the column in the data.frame to use with \code{aggregatorName}. Must be additive (i.e a number).}
 
-\item{rendererLibraries}{One or more of the following renderers: core, D3, C3, plotly, gchart, exports, subtotals}
+\item{rendererLibraries}{One or more of the following renderers: core, D3, C3, exports, subtotals}
 
 \item{rendererName}{List name of the renderer selected, e.g. Table, Heatmap, Treemap etc.}
 

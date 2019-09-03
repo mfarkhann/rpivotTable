@@ -10,7 +10,7 @@
 #'              the \strong{columns} of the pivot table.
 #' @param aggregatorName String name of the pivottable.js aggregator to prepopulate the pivot table.
 #' @param vals String name of the column in the data.frame to use with \code{aggregatorName}. Must be additive (i.e a number).
-#' @param rendererLibraries A vector containing one or more of "core", "D3", "C3", "plotly", "gchart", "export", "subtotals"
+#' @param rendererLibraries A vector containing one or more of "core", "D3", "C3", "export", "subtotals"
 #' @param rendererName List name of the renderer selected, e.g. Table, Heatmap, Treemap etc.
 #' @param sorter String name this allows to implement a javascript function to specify the ad hoc sorting of certain values. See vignette for an example.
 #'              It is especially useful with time divisions like days of the week or months of the year (where the alphabetical order does not work).
@@ -116,8 +116,8 @@ rpivotTable <- function(
     stop( "data should be a data.frame, data.table, or table", call.=F)
   }
 
-  if( sum(rendererLibraries %in% c("core", "D3", "C3", "plotly", "gchart", "export", "subtotals")) != length(rendererLibraries)) {
-    stop( "rendererLibraries should be one or more of 'core', 'D3', 'C3', 'plotly', 'gchart', 'export', 'subtotals'", call.=F)
+  if( sum(rendererLibraries %in% c("core", "D3", "C3",  "export", "subtotals")) != length(rendererLibraries)) {
+    stop( "rendererLibraries should be one or more of 'core', 'D3', 'C3', 'export', 'subtotals'", call.=F)
   }
   if (subtotals) {
     rendererLibraries <- c(rendererLibraries, "subtotals")
